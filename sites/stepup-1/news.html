@@ -1,0 +1,44 @@
+<main>
+  <div class="container p-0">
+
+    <div class="wrapperLg shadowWrapper position-relative" style="background: url('{% for feature in page.features limit: 1 %}{{ feature.image_url }}{% endfor %}') no-repeat center; background-size: cover;">
+      <div class="overlayTransparent blue"></div>
+        <div class="row d-flex">
+          <div class="col-sm-5 col-sm-offset-2">
+            <div class="position-relative h100 w100">
+              <div class="contentYCentered">
+                <h1 class="pageHeadline">{{ page.headline }}</h1>
+                {% for feature in page.features limit: 1 %}<p class="lead subHeadline">{{ feature.headline }}</p>{% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="row d-flex">
+      {% for post in page.blog.most_recent_blog_posts %}
+      <div class="col-sm-6">
+        <a href="{{ post.url }}" class="wrapperSm mt-3 shadowWrapper">
+          <div class="row no-gutters d-flex">
+            <div class="col-sm-6">
+              <div class="position-relative" style="background: url('{% for feature in post.features limit: 1 %}{{ feature.image_url }}{% endfor %}') no-repeat center; background-size: cover;"></div>
+            </div>
+            <div class="col-sm-6">
+              <div class="position-relative {% cycle 'blue', 'highLightGreen', 'lightGreen', 'callToAction' %}">
+                <div class="contentContainer">
+                  <span class="cat"></span>
+                  <h4>{{ post.headline }}</h4>
+                  <span class="date">{{ post.published_at | date: '%B %d, %Y' }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+
+
+    </div>
+
+</main>

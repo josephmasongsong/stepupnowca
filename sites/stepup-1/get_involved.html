@@ -1,0 +1,33 @@
+<main>
+  <div class="container p-0">
+    <div class="wrapperLg shadowWrapper position-relative" style="background: url('{% for feature in page.features limit: 1 %}{{ feature.image_url }}{% endfor %}') no-repeat center; background-size: cover;">
+      <div class="overlayTransparent highLightGreen"></div>
+
+        <div class="row d-flex">
+          <div class="col-sm-5 col-sm-offset-2">
+            <div class="position-relative h100 w100">
+              <div class="contentYCentered">
+                <h1 class="pageHeadline">{{ page.headline }}</h1>
+                <p class="lead subHeadline">{{ page.excerpt }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    </div>
+    <div class="wrapperSm position-relative">
+      <div class="row d-flex no-gutters">
+        {% for child in page.children %}
+        <div class="col-sm-4">
+          <div class="position-relative o-1 h100 w100 mt-3 {% cycle 'blue', 'lightGreen', 'callToAction', 'highLightGreen' %}">
+            <div class="contentYCentered text-center w100">
+              <h2 class="mb-1">{{ child.headline }}</h2>
+              <a href="{{ child.url }}" class="learnmore"><span>Learn more</span></a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</main>

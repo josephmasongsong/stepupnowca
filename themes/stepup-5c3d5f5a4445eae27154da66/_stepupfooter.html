@@ -1,0 +1,40 @@
+
+
+<div class='container'>
+  <div class='row'>
+    <div class='col-sm-9'>
+      <img src="https://d3n8a8pro7vhmx.cloudfront.net/themes/5c3d5f5a4445eae27154da66/attachments/original/1547786450/logo-green.png?1547786450" alt="">
+      <ul class='list-inline'>
+        {% for child in site.root_nav_pages %}
+        {% if child.leaf? or child.nav_children.size == 0 %}
+        <li class='list-inline-item' class="divider">|</li>
+        <li class='list-inline-item'>
+          <a href='{{ child.url }}'><span>{{ child.name }}</span></a>
+        </li>
+        {% endif %}
+        {% endfor %}
+        <li class='list-inline-item' class="divider">|</li>
+        <li>
+          <a href="{{ site.donation_page.url }}" class="donateBtn"><span>Donate</span></a>
+        </li>
+      </ul>
+      {% if site.footer_content.size > 0 %}
+      <p class='small'>{{ site.footer_content | strip_html }}</p>
+      {% endif %}
+    </div>
+    <div class='col-sm-3'>
+      <ul class='list-inline' style="margin-bottom: 0;">
+        <li class='list-inline-item'>
+          <a href='https://www.facebook.com/StepUPnow.ca' target="_blank">
+          <i class='fa fa-facebook fa-2x fa-fw'></i>
+          </a>
+        </li>
+        <li class='list-inline-item'>
+          <a href='https://twitter.com/StepUPnow_ca'>
+          <i class='fa fa-twitter fa-2x fa-fw'></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

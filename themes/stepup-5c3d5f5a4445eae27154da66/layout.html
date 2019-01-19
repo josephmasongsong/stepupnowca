@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page_title }}</title>
+
+    <script src="https://use.fontawesome.com/79e9af75d6.js"></script>
+    <link href="theme.scss" rel="stylesheet">
+    <link href="stepup.scss" rel="stylesheet">
+
+    {{ content_for_header }}
+
+    <script type="text/javascript">
+      NB.appConfig.userIsLoggedIn = {{request.logged_in?}};
+    </script>
+  </head>
+  <body class="{{ page.page_class_name }} page-{{ request.template | replace: '_', '-' }} js">
+    <div id="wrapper">
+      {% include "stepupnav" %}
+
+
+      {% yield %}
+
+
+      <footer class="stepupfooter">
+        {% include "stepupfooter" %}
+        {{ content_for_footer }}
+      </footer>
+    </div>
+
+
+    <script src="bootstrap.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,48 @@
+
+.stepupnav {
+  margin: 0;
+  background: $light-green;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  .navbar-brand {
+    padding: 5px 0 0 5px;
+    height: inherit;
+    img {
+      width: 200px;
+    }
+  }
+  .navbar-nav {
+    li {
+      &.active {
+        a {
+          font-weight: bold;
+        }
+      }
+      a {
+        padding: 23px 1.75rem;
+        font-size: 1rem;
+        color: white;
+        letter-spacing: 0.5px;
+        &:focus,
+        &:hover {
+          background: transparent;
+        }
+        &.donateBtn {
+          font-weight: bold;
+        }
+        &.donateBtn span {
+          position: relative;
+        }
+        &.donateBtn span:after {
+          content: '';
+          width: 100%;
+          border-top: 3px solid white;
+          position: absolute;
+          left: 0;
+          bottom: -5px;
+        }
+      }
+    }
+  }
+}

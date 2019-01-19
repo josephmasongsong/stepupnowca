@@ -1,0 +1,28 @@
+<nav class="navbar stepupnav">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#stepupNav" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/"><img src="https://d3n8a8pro7vhmx.cloudfront.net/themes/5c3d5f5a4445eae27154da66/attachments/original/1547784815/logo.png?1547784815"></a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="stepupNav">
+      <ul class="nav navbar-nav navbar-right">
+        {% for child in site.root_nav_pages %}
+        {% if child.leaf? or child.nav_children.size == 0 %}
+        <li {% if child.is_or_is_ancestor_of_current_page? %}class="active"{% endif %}>
+          <a href="{{ child.url }}"><span>{{ child.name }}</span></a>
+        </li>
+        {% endif %}
+        {% endfor %}
+        <li>
+          <a href="{{ site.donation_page.url }}" class="donateBtn"><span>Donate</span></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

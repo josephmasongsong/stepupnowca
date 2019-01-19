@@ -1,0 +1,28 @@
+.page-pages-show-donation-v2-wide footer {
+  padding: 3rem 0;
+}
+.stepupfooter {
+  background: #fff;
+  padding: 3rem 0;
+  margin: 0;
+  .divider {
+    color: #f2f2f2;
+  }
+  a {
+    color: $light-green;
+    letter-spacing: 0.5px;
+    font-size: 0.875rem;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  img {
+    width: 180px;
+    vertical-align: middle;
+    margin-right: 3rem;
+    float: left;
+  }
+  .col-sm-3 {
+    text-align: right;
+  }
+}

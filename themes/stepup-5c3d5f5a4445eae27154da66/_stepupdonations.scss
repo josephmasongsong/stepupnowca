@@ -1,0 +1,166 @@
+.page-pages-show-donation-v2-wide .navbar-header .navbar-brand {
+  max-width: 200px;
+}
+.page-pages-show-donation-v2-wide .form-control.card-field {
+  padding-top: 13px;
+}
+.page-pages-show-donation-v2-wide .donation-v2-amounts.radio-inline {
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+.radio-inline, .checkbox-inline {
+    cursor: default;
+}
+.marginbottom, .radio-inline, .checkbox-inline {
+    margin-bottom: 15px;
+}
+.padbottommore {
+    padding-bottom: 15px;
+}
+.radio-inline, .checkbox-inline {
+    display: inline-block;
+    padding-left: 20px;
+    margin-bottom: 0;
+    vertical-align: middle;
+    font-weight: normal;
+    cursor: pointer;
+}
+.radio-inline>span, .checkbox-inline>span {
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.page-pages-show-donation-v2-wide .donation-v2-amounts.radio-inline input, .page-pages-show-donation-v2-wide .donation-v2-amounts.radio-inline #donation_amount_other {
+    display: none;
+}
+.radio input[type="radio"], .radio-inline input[type="radio"], .checkbox input[type="checkbox"], .checkbox-inline input[type="checkbox"] {
+    position: absolute;
+    margin-left: -20px;
+    margin-top: 4px \9;
+}
+
+.page-pages-show-donation-v2-wide .donation-v2-amounts.radio-inline label {
+    margin: 5px 10px 5px 0;
+    font-size: 20px;
+}
+
+.page-pages-show-donation-v2-wide .donation-v2-amounts.radio-inline label {
+    color: #333;
+    background: rgba($call-to-action, 0.1);
+    border-color: #ccc;
+}
+.page-pages-show-donation-v2-wide .donation-v2-amounts.radio-inline span {
+  width: calc(33% - 5px);
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-bottom: 0.5rem;
+  &:last-child {
+    width: calc(100% - 5px);
+  }
+}
+.page-pages-show-donation-v2-wide .donation-v2-amounts.radio-inline label {
+    display: block;
+    margin: 0;
+    font-weight: normal;
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 16px 1rem;
+    font-size: 1rem;
+    width: 100%;
+    line-height: 1.42858;
+    border-radius: 0px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.page-pages-show-donation-v2-wide .donation-v2-amounts.radio-inline input[type="radio"]:checked+label {
+    background: $call-to-action;
+    color: #FFF;
+    box-shadow: none;
+}
+
+.page-pages-show-donation-v2-wide .donation-v2-amounts.radio-inline input[type="radio"]:checked+label {
+  background-image: none;
+}
+
+.page-pages-show-donation-v2-wide .donation-v2-occurence-radio {
+    position: relative;
+    height: 34px;
+}
+.page-pages-show-donation-v2-wide .donation-other-input-container {
+    position: relative;
+}
+.page-pages-show-donation-v2-wide .donation-other-input-container .currency-symbol {
+    color: #000;
+    position: absolute;
+    top: 50%;
+    left: 8px;
+    font-size: 16px;
+    transform: translate(0, -50%);
+}
+.page-pages-show-donation-v2-wide .donation-other-input-container .currency-symbol {
+    color: #000;
+    position: absolute;
+    top: 50%;
+    left: 8px;
+    font-size: 16px;
+    transform: translate(0, -50%);
+}
+.page-pages-show-donation-v2-wide .donation-other-input-container .currency-symbol {
+    color: #000;
+    position: absolute;
+    top: 26px;
+    left: 15px;
+    font-size: 16px;
+}
+.page-pages-show-donation-v2-wide .donation-other-input-container input {
+    padding-left: 30px;
+}
+.page-pages-show-donation-v2-wide .donation-other-input-container input {
+  padding: 13px 15px 13px 30px;
+  border-radius: 0;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  height: auto;
+  width: 100%;
+  letter-spacing: 0.3px;
+  box-shadow: none;
+  background: rgba(15, 95, 160,0.1);
+  border: 1px solid transparent;
+  &:focus {
+    border: 1px solid $blue;
+    outline: none;
+  }
+  &:focus::placeholder {
+    color: $blue;
+  }
+}
+.page-pages-show-donation-v2-wide .donation-v2-occurence-radio label {
+  display: inline-block;
+  margin: 0 10px 0 0;
+}
+.page-pages-show-donation-v2-wide .submit-container {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.page-pages-show-donation-v2-wide .submit-container .donation-v2-amount {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  padding: 1.5rem 0;
+  margin-bottom: 25px;
+  width: 100%;
+  min-height: 46px;
+  line-height: initial;
+  background: rgba($highlight-green, 0.2);
+}

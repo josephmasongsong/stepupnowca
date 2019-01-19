@@ -1,0 +1,27 @@
+<div class="wrapperLg position-relative p-0" style="background: url('{% for feature in page.features limit: 1 %}{{ feature.image_url }}{% endfor %}') no-repeat center; background-size: cover;">
+  <div class="overlayTransparent blue"></div>
+  <div class="container-fluid">
+    <div class="row d-flex">
+      <div class="col-sm-5 col-sm-offset-2">
+        <div class="position-relative h100 w100">
+          <div class="contentYCentered">
+            <h1 class="pageHeadline">{{ page.headline }}</h1>
+            <img src="{{ page.author.profile_image_url }}" class="img-responsive img-circle authorImage"/>
+            <span class="author lead">Posted by {{ page.author.published_name_linked }} on {{ page.published_at | date: '%B %d, %Y' }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main>
+  <div class="container p-0">
+    <div class="position-relative shadowWrapper white">
+      <div class="pageContent">
+        {{ page.blog_post.content_full }}
+        {% include "sharestepup" %}
+      </div>
+    </div>
+  </div>
+</main>
