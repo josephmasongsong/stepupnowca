@@ -20,7 +20,9 @@ body {
 main {
   padding: 3rem 0;
 }
-
+.alert {
+  margin-bottom: 0;
+}
 a,button, input[type="text"]:focus, input[type="email"]:focus, input[type="submit"]:focus, input[type="phone"]:focus, input[type="checkbox"]:checked, input[type="checkbox"]:focus {
     transition: all 0.2s ease;
     transition-property: transform, opacity, color, border-color, background-color;
@@ -52,6 +54,9 @@ h6 {
 p {
   margin-bottom: 1rem;
 }
+.text-white {
+  color: #fff;
+}
 .zIndex {
   z-index: 10;
 }
@@ -75,11 +80,17 @@ p {
   padding-left: 2rem;
   padding-right: 2rem;
 }
+.mb-0 {
+  margin-bottom: 0 !important;
+}
 .mb-1 {
-  margin-bottom: 1rem;
+  margin-bottom: 1rem !important;
 }
 .mt-3 {
   margin-top: 3rem;
+}
+.mb-3 {
+  margin-bottom: 3rem;
 }
 .mx-1 {
   margin-left: 1rem;
@@ -114,6 +125,11 @@ p {
     bottom: 0;
     left: 0;
     border-right: 1px solid #f2f2f2;
+}
+
+.sidebar>div {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .callToAction {
@@ -188,6 +204,7 @@ span.cat {
   font-size: 0.875rem;
   letter-spacing: 1px;
   margin-bottom: 0.5rem;
+  color: #fff;
 }
 
 a.learnmore {
@@ -209,13 +226,20 @@ a.learnmore {
     }
   }
 }
-
+.d-block {
+  display: block;
+}
 .shareicon {
   font-size: 1.5rem !important;
   display: inline-block;
   vertical-align: middle;
 }
-
+.recentArticle {
+  padding: 1.25rem 1.5rem;
+  &:hover {
+    color: #fff;
+  }
+}
 .fa-facebook {
   color: #4267b2;
 }
@@ -244,11 +268,31 @@ a.learnmore {
   margin-bottom: 0;
   span {
     display:inline-block;
-    vertical-align:middle;
+    vertical-align: bottom;
     font-size: 0.875rem;
     text-transform: uppercase;
     letter-spacing: 1px;
   }
+}
+.pagination-container {
+    margin-top: 0;
+    border-top: 0;
+}
+.pagination {
+  margin-top: 3rem;
+}
+.pagination>li>a, .pagination>li>span {
+  background-color: transparent;
+  border: 0;
+  padding: 6px 18px;
+  color: $blue;
+}
+.pagination>.active>a {
+  background-color: $blue;
+  border-color: $blue;
+}
+.pagination>.disabled>a {
+  background-color: transparent;
 }
 .wrapperSm {
   .callToAction, .lightGreen, .blue, .highLightGreen, .position-relative {

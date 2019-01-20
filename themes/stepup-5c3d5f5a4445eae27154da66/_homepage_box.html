@@ -1,0 +1,19 @@
+{% case homepage_box.type_name %}
+
+{% when 'Volunteer Signup' %}
+<h2 class="mb-1 text-white">{{ homepage_box.headline }}</h2>
+
+<a href="{{ homepage_box.url }}" class="learnmore"><span>Volunteer With Us</span></a>
+{% when 'Donation (v2)' %}
+<h2 class="mb-1 text-white">{{ homepage_box.headline }}</h2>
+
+<a href="{{ homepage_box.url }}" class="learnmore"><span>Make A Donation</span></a>
+{% when 'Petition' %}
+<h2 class="mb-1 text-white">{{ homepage_box.headline }}</h2>
+
+<a href="{{ homepage_box.url }}" class="learnmore"><span>Sign The Petition</span></a>
+{% when 'Basic' %}
+<h2 class="mb-1 text-white">{{ homepage_box.name }}</h2>
+<p>{{ homepage_box.excerpt }}</p>
+<a href="{{ homepage_box.url }}" class="learnmore"><span>Learn More</span></a>
+{% endcase %}

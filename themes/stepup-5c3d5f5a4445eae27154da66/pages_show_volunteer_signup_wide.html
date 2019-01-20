@@ -8,7 +8,7 @@
           <div class="position-relative h100 w100">
             <div class="contentYCentered">
               <h1 class="pageHeadline">{{ page.headline }}</h1>
-              <p class="lead subHeadline">{{ page.volunteer_signup.content | strip_html }}</p>
+              {% for feature in page.features limit: 1 %}<p class="lead subHeadline">{{ feature.headline }}</p>{% endfor %}
             </div>
           </div>
         </div>
@@ -17,8 +17,14 @@
     </div>
     <div class="position-relative shadowWrapper white">
       <div class="row">
-        <div class="col-sm-6 col-sm-offset-3">
-          <div class="form stepUpform py-3">
+        <div class="col-sm-6">
+          <div class="pageContent">
+            {{ page.volunteer_signup.content }}
+            {% include "sharestepup" %}
+          </div>
+        </div>
+        <div class="col-sm-6 sidebar">
+          <div class="form stepUpform py-3 px-2">
 
             {% if request.sorta_logged_in? %}
 
@@ -42,7 +48,7 @@
 
             {% else %}
 
-            <h2>Will you volunteer?</h2>
+            <h3>Will you volunteer?</h3>
 
             {% endif %}
 
@@ -128,7 +134,6 @@
             <div class="form-submit"></div>
 
             {% endform_for %}
-            {% include "sharestepup" %}
           </div>
         </div>
       </div>

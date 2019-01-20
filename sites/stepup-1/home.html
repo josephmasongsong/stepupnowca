@@ -3,17 +3,9 @@
   <div class="container-fluid">
     <div class="row d-flex">
       <div class="col-sm-4 col-sm-offset-2">
-        <div class="position-relative h100 w100">
+        <div class="position-relative h100 w100 text-white">
           <div class="contentYCentered">
-            <h1 style="color: #fff; margin-bottom: 1.5rem; ">It's time for the BC NDP to</h1>
-            <ul class="fa-ul" style="color: #fff; font-size: 1.5rem;">
-              <li><i class="fa-li fa fa-check"></i>Return to Sound Fiscal Management</li>
-              <li><i class="fa-li fa fa-check"></i>Build on our Opportunities for Prosperity</li>
-              <li><i class="fa-li fa fa-check"></i>Eliminate Class Divisiveness</li>
-              <li><i class="fa-li fa fa-check"></i>End Unfair Taxation</li>
-              <li><i class="fa-li fa fa-check"></i>Provide Assurance of Jobs</li>
-
-            </ul>
+            {{ page.basic.content }}
           </div>
         </div>
       </div>
@@ -34,33 +26,7 @@
   <div class="container p-0">
     <div class="wrapperSm position-relative">
       <div class="row d-flex no-gutters">
-        <div class="col-sm-4">
-          <div class="position-relative o-1 h100 w100 blue">
-            <div class="contentYCentered text-center w100">
-              <h2 class="mb-1">Who We Are</h2>
-              <p>We are a grassroots, non-partisan movement<br>by concerned BC citizens</p>
-              <a href="#" class="learnmore"><span>Learn more</span></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="position-relative o-1 h100 w100 lightGreen">
-            <div class="contentYCentered text-center w100">
-              <h2 class="mb-1">Get Involved</h2>
-              <p>If it's every day, or every so often,<br>step up and get invovled</p>
-              <a href="#" class="learnmore"><span>Learn more</span></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="position-relative o-1 h100 w100 callToAction">
-            <div class="contentYCentered text-center w100">
-              <h2 class="mb-1">Donate</h2>
-              <p>Together we can challenge policies<br>that divide our community</p>
-              <a href="#" class="learnmore"><span>Learn more</span></a>
-            </div>
-          </div>
-        </div>
+          {% tag "homepage" with "homepage_widgets" %}
       </div>
     </div>
   </div>

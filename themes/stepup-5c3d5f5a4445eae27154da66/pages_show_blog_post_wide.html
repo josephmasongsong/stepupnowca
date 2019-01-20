@@ -5,6 +5,11 @@
       <div class="col-sm-5 col-sm-offset-2">
         <div class="position-relative h100 w100">
           <div class="contentYCentered">
+            {% if page.tags_count > 0 %}
+              {% for tag in page.tags %}
+                <span class="cat">{{ tag.name }}</span>
+              {% endfor %}
+            {% endif %}            
             <h1 class="pageHeadline">{{ page.headline }}</h1>
             <img src="{{ page.author.profile_image_url }}" class="img-responsive img-circle authorImage"/>
             <span class="author lead">Posted by {{ page.author.published_name_linked }} on {{ page.published_at | date: '%B %d, %Y' }}</span>

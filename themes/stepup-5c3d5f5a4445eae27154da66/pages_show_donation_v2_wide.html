@@ -1,14 +1,14 @@
 <main>
   <div class="container p-0">
-    <div class="wrapperSm shadowWrapper position-relative" style="background: url('{% for feature in page.features limit: 1 %}{{ feature.image_url }}{% endfor %}') no-repeat center; background-size: cover;">
+    <div class="wrapperSm shadowWrapper position-relative" style="background: url('{{ site.background_image_url }}') no-repeat center; background-size: cover;">
       <div class="overlayTransparent callToAction"></div>
 
       <div class="row d-flex">
         <div class="col-sm-5 col-sm-offset-2">
           <div class="position-relative h100 w100">
             <div class="contentYCentered">
-              <h1 class="pageHeadline">{{ page.headline }}</h1>
-              {% if page.donation_v2.content.size > 0 %}<p class="lead subHeadline">{{ page.donation_v2.content | strip_html }}</p>{% endif %}
+              <span class="cat">Donation</span>
+              <h1 class="pageHeadline mb-0">{{ page.headline }}</h1>
             </div>
           </div>
         </div>
@@ -17,7 +17,15 @@
     </div>
     <div class="wrapperLg shadowWrapper white position-relative">
       <div class="row d-flex no-gutters">
-        <div class="col-sm-6 col-sm-offset-3">
+        <div class="col-sm-6">
+          {% if page.donation_v2.content.size > 0 %}
+          <div class="pageContent">
+            {{ page.donation_v2.content }}
+            {% include "sharestepup" %}
+          </div>
+          {% endif%}
+        </div>
+        <div class="col-sm-6 sidebar">
 
           {% form_for donation %}
 

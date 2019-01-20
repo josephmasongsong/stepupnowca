@@ -18,6 +18,7 @@
   </head>
   <body class="{{ page.page_class_name }} page-{{ request.template | replace: '_', '-' }} js">
     <div id="wrapper">
+      {{ content_for_notifications }}
       {% include "stepupnav" %}
 
 

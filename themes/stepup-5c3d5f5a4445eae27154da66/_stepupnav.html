@@ -19,7 +19,7 @@
         </li>
         {% endif %}
         {% endfor %}
-        <li>
+        <li {% if page.url == site.donation_page.url %}class="active"{% endif %}>
           <a href="{{ site.donation_page.url }}" class="donateBtn"><span>Donate</span></a>
         </li>
       </ul>
