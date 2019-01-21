@@ -294,6 +294,13 @@ a.learnmore {
 .pagination>.disabled>a {
   background-color: transparent;
 }
+.homepageBanner {
+  .homepageContent {
+    ul li {
+      font-size: 1.5rem;
+    }
+  }
+}
 .wrapperSm {
   .callToAction, .lightGreen, .blue, .highLightGreen, .position-relative {
     min-height: 285px;

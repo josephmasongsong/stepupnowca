@@ -1,0 +1,33 @@
+<main>
+  <div class="container p-0">
+    <div class="wrapperLg shadowWrapper position-relative" style="background: url('{{ site.background_image_url }}') no-repeat center; background-size: cover;">
+      <div class="overlayTransparent highLightGreen"></div>
+
+        <div class="row d-flex">
+          <div class="col-sm-5 col-sm-offset-2">
+            <div class="position-relative h100 w100">
+              <div class="contentYCentered">
+                <h1 class="pageHeadline">Page Not Found</h1>
+                <p class="lead subHeadline">Either the link you were looking for is incorrect or the page has been archived.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    </div>
+    <div class="position-relative shadowWrapper white">
+      <div class="row d-flex no-gutters">
+        <div class="col-sm-8">
+
+        </div>
+        <div class="col-sm-4">
+          <div class="sidebar position-relative h100 w100">
+            <div class="position-relative blue zIndex">
+              {% subpage "join_stepup" with "joinstepup" %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
