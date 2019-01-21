@@ -1,4 +1,4 @@
-<nav class="navbar stepupnav">
+<nav class="navbar stepupnav shadowWrapper">
   <div class="container">
     <div class="navbar-header">
       <button class="hamburger hamburger--squeeze navbar-toggle collapsed hidden-sm hidden-md hidden-lg" type="button" data-target="#stepupNav" data-toggle='collapse' type='button'>
@@ -13,12 +13,12 @@
         {% for child in site.root_nav_pages %}
         {% if child.leaf? or child.nav_children.size == 0 %}
         <li {% if child.is_or_is_ancestor_of_current_page? %}class="active"{% endif %}>
-          <a href="{{ child.url }}"><span>{{ child.name }}</span></a>
+          <a href="{{ child.url }}" class="grow"><span>{{ child.name }}</span></a>
         </li>
         {% endif %}
         {% endfor %}
         <li {% if page.url == site.donation_page.url %}class="active"{% endif %}>
-          <a href="{{ site.donation_page.url }}" class="donateBtn"><span>Donate</span></a>
+          <a href="{{ site.donation_page.url }}" class="donateBtn grow"><span>Donate</span></a>
         </li>
       </ul>
     </div>
