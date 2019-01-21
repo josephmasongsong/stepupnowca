@@ -10,7 +10,8 @@
                 <span class="cat">Petition</span>
                 <h1 class="pageHeadline">{{ page.headline }}</h1>
                 <img src="{{ page.author.profile_image_url }}" class="img-responsive img-circle authorImage"/>
-                <span class="author lead">Created by {{ page.author.published_name_linked }} on {{ page.published_at | date: '%B %d, %Y' }}</span>
+                <span class="author lead hidden-xs">Created by {{ page.author.published_name_linked }} on {{ page.published_at | date: '%B %d, %Y' }}</span>
+                <span class="author lead visible-xs">By {{ page.author.published_name_linked }} on {{ page.published_at | date: '%m/%d/%Y' }}</span>
               </div>
             </div>
           </div>

@@ -19,7 +19,7 @@
       <div class="row d-flex no-gutters">
         {% for child in page.children %}
         <div class="col-sm-4">
-          <div class="position-relative h100 w100" style="background: url('{% for feature in child.features limit: 1 %}{{ feature.image_url }}{% endfor %}') no-repeat center; background-size: cover;">
+          <div class="position-relative h100 w100 grow" style="background: url('{% for feature in child.features limit: 1 %}{{ feature.image_url }}{% endfor %}') no-repeat center; background-size: cover;">
             <div class="overlayTransparent {% cycle 'blue', 'lightGreen', 'callToAction', 'highLightGreen' %}"></div>
             <div class="contentYCentered text-center w100 px-2">
               {% include "homepage_box" with child %}

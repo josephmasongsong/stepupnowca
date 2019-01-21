@@ -1,6 +1,6 @@
 {% for post in tag.most_recent_published_pages %}
 <div class="col-sm-4">
-  <div class="position-relative o-1 h100 w100 {% cycle 'blue', 'lightGreen', 'callToAction', 'highLightGreen' %}">
+  <div class="position-relative o-1 h100 w100 {% cycle 'blue', 'lightGreen', 'callToAction', 'highLightGreen' %} grow">
     <div class="contentYCentered text-center w100 px-2">
       {% include "homepage_box" with post %}
     </div>
