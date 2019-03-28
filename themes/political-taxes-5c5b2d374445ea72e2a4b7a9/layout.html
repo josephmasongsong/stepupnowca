@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page_title }}</title>
+
+    <link href="theme.scss" rel="stylesheet">
+    <link href="politicaltaxes.scss" rel="stylesheet">
+
+    {{ content_for_header }}
+    <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyASYCkfHF1aYgHiM3HpX8rDFiKayXxGex4&amp;libraries=weather,geometry,visualization,places,drawing' type='text/javascript'></script>
+    <script type="text/javascript">
+      NB.appConfig.userIsLoggedIn = {{request.logged_in?}};
+    </script>
+  </head>
+  <body class="{{ page.page_class_name }} page-{{ request.template | replace: '_', '-' }} js">
+    <div id="wrapper">
+      {{ content_for_notifications }}
+      {% include "stepupnav" %}
+
+
+      {% yield %}
+
+
+      <footer class="stepupfooter">
+        {% include "stepupfooter" %}
+        {{ content_for_footer }}
+      </footer>
+    </div>
+
+    <script src="https://use.fontawesome.com/79e9af75d6.js"></script>
+    <script src="wow.min.js"></script>
+    <script src="bootstrap.js"></script>
+    <script src="stepup.js"></script>
+
+  </body>
+</html>

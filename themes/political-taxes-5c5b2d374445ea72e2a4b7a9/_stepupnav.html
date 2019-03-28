@@ -1,0 +1,26 @@
+<nav class="navbar stepupnav shadowWrapper">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="hamburger hamburger--squeeze navbar-toggle collapsed hidden-sm hidden-md hidden-lg" type="button" data-target="#stepupNav" data-toggle='collapse' type='button'>
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+      <a class="navbar-brand" href="/"><img src="https://d3n8a8pro7vhmx.cloudfront.net/themes/5c3d5f5a4445eae27154da66/attachments/original/1547784815/logo.png?1547784815"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="stepupNav">
+      <ul class="nav navbar-nav navbar-right">
+        {% for child in site.root_nav_pages %}
+        {% if child.leaf? or child.nav_children.size == 0 %}
+        <li {% if child.is_or_is_ancestor_of_current_page? %}class="active"{% endif %}>
+          <a href="{{ child.url }}" class="grow"><span>{{ child.name }}</span></a>
+        </li>
+        {% endif %}
+        {% endfor %}
+        <li {% if page.url == site.donation_page.url %}class="active"{% endif %}>
+          <a href="https://www.stepupnow.ca/make_a_donation" class="donateBtn grow"><span>Donate</span></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

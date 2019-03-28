@@ -1,0 +1,20 @@
+<ul class='list-inline sharestepup'>
+  <li class='list-inline-item'>
+    {% if request.sorta_logged_in? %}
+      <a href='http://www.facebook.com/share.php?u={{ page.full_url_with_recruiter | urlencode }}' target="_blank" >
+      <i class='fa fa-facebook fa-2x fa-fw shareicon grow'></i> <span>Share</span>
+      </a>
+    {% else %}
+      <a href='http://www.facebook.com/share.php?u={{ page.full_url }}' target="_blank" >
+      <i class='fa fa-facebook fa-2x fa-fw shareicon grow'></i> <span>Share</span>
+      </a>
+    {% endif %}
+  </li>
+  <li class='list-inline-item'>
+    {% if request.sorta_logged_in? %}
+      <a href="{{ page.tweet_url }}" data-count="none" target="_blank" data-text="{{ page.default_face_tweet_text }}" data-via="{{ site.broadcaster.twitter_login }}" data-url="{{ page.full_url_with_recruiter }}"><i class='fa fa-twitter fa-2x fa-fw shareicon grow'></i> <span>Tweet</span></a>
+    {% else %}
+      <a href="{{ page.tweet_url }}" data-count="none" target="_blank" data-text="{{ page.default_face_tweet_text }}" data-via="{{ site.broadcaster.twitter_login }}"><i class='fa fa-twitter fa-2x fa-fw shareicon grow'></i> <span>Tweet</span></a>
+    {% endif %}
+  </li>
+</ul>
